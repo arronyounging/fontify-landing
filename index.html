@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fontify - Your AI Font Assistant. Make your website fonts perfect with one click using AI-powered optimization.">
+    <meta name="theme-color" content="#6366f1">
+    <title>Fontify - Your AI Font Assistant</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Actual resource loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Fontify - Your AI Font Assistant">
+    <meta property="og:description" content="Make your website fonts perfect with one click using AI-powered optimization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fontify.pro">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fontify - Your AI Font Assistant">
+    <meta name="twitter:description" content="Make your website fonts perfect with one click using AI-powered optimization.">
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- PWA support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    
+    <!-- Reduced Motion Support -->
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https:; img-src 'self' https: data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Mobile menu button -->
+    <button class="menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-icon"></span>
+    </button>
+    
+    <!-- Mobile menu -->
+    <nav class="nav-links" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="#features">Features</a>
+        <a href="#perfect-for">Who It's For</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#" class="cta-button">Get Started</a>
+    </nav>
+    
+    <div class="loading" role="status" aria-live="polite">
+        <div class="loading-logo" aria-label="Loading Fontify">Fontify</div>
+        <div class="loading-progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Fontify</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#perfect-for">Who It's For</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Make Your Website Fonts Perfect with One Click</h1>
+            <p class="hero-subtitle">Whether you're a developer tired of endless font debugging, a designer looking for the perfect font match, or a website owner wanting professional-looking text - Fontify is here to help.</p>
+            <div class="cta-group">
+                <a href="#" class="cta-button primary">Install Now</a>
+                <a href="#features" class="cta-button secondary">Learn More</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.png" alt="Fontify in action">
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="features" class="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title">The Magic Behind Fontify</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Instant Font Management</h3>
+                        <p>Hover to inspect, click to preview, and apply with one click. No more switching between code and browser.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI-Powered Optimization</h3>
+                        <p>Let our AI analyze your design and recommend professional font combinations. It's like having a typography expert by your side.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Zero Learning Curve</h3>
+                        <p>No coding required. No technical knowledge needed. Just install and start creating beautiful typography.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfect-for" class="perfect-for">
+            <div class="container">
+                <h2>Perfect For</h2>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="audience-icon">👩‍💻</div>
+                        <h3>Developers</h3>
+                        <p>Say goodbye to tedious font debugging</p>
+                        <ul>
+                            <li>Instant font inspection</li>
+                            <li>Real-time preview</li>
+                            <li>No code changes needed</li>
+                        </ul>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🎨</div>
+                        <h3>Designers</h3>
+                        <p>Make professional typography effortless</p>
+                        <ul>
+                            <li>Smart font recommendations</li>
+                            <li>Instant visual feedback</li>
+                            <li>Consistent design across pages</li>
+                        </ul>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">👔</div>
+                        <h3>Website Owners</h3>
+                        <p>Professional typography made easy</p>
+                        <ul>
+                            <li>One-click optimization</li>
+                            <li>No technical skills required</li>
+                            <li>Risk-free changes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="comparison">
+            <div class="container">
+                <h2>See the Difference</h2>
+                <div class="comparison-grid">
+                    <div class="comparison-card old">
+                        <h3>The Old Way</h3>
+                        <ol>
+                            <li>Edit code</li>
+                            <li>Refresh browser</li>
+                            <li>Check results</li>
+                            <li>Repeat endlessly</li>
+                        </ol>
+                        <div class="time">⏰ Hours of work</div>
+                    </div>
+                    <div class="comparison-card new">
+                        <h3>The Fontify Way</h3>
+                        <ol>
+                            <li>Install extension</li>
+                            <li>Select elements</li>
+                            <li>One-click optimize</li>
+                        </ol>
+                        <div class="time">⚡️ Minutes of work</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Real People, Real Results</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"Fontify transformed how I work with web fonts. What used to take hours now takes minutes."</p>
+                        <div class="author">- Tom, Frontend Developer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"The AI recommendations are spot on. It's like having a typography expert on call."</p>
+                        <div class="author">- Sarah, UI Designer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Finally, I can make professional font choices without any technical knowledge."</p>
+                        <div class="author">- Mike, Website Owner</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+            <div class="container">
+                <h2 id="pricing-title">Choose Your Plan</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">🎁</div>
+                            <h3>Free</h3>
+                            <p>Perfect for starting out</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Font inspection</li>
+                            <li>Basic modifications</li>
+                            <li>Limited optimizations</li>
+                        </ul>
+                        <a href="#" class="cta-button">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">⭐️</div>
+                            <h3>Pro</h3>
+                            <p>Unlock the full power</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>AI optimization</li>
+                            <li>Advanced customization</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="#" class="cta-button">Upgrade to Pro</a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">🏢</div>
+                            <h3>Enterprise</h3>
+                            <p>Built for teams</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>API access</li>
+                            <li>Dedicated support</li>
+                            <li>Team collaboration</li>
+                        </ul>
+                        <a href="#" class="cta-button">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Fontify</div>
+                    <p>Transform your web typography today</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#">Documentation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:info@fontify.pro">info@fontify.pro</a>
+                        <a href="#">Support</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Fontify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preload key images -->
+    <link rel="preload" as="image" href="hero-image.png">
+    
+    <!-- Defer non-critical JavaScript -->
+    <script defer src="script.js"></script>
+    
+    <!-- Error boundary -->
+    <div id="error-boundary" class="error-boundary" role="alert" aria-live="assertive" hidden>
+        <p>Something went wrong. Please try refreshing the page.</p>
+        <button onclick="window.location.reload()">Refresh Page</button>
+    </div>
+    
+    <!-- Offline support -->
+    <div id="offline-message" class="offline-message" role="alert" aria-live="polite" hidden>
+        <p>You are currently offline. Some features may be limited.</p>
+    </div>
+</body>
+</html>
