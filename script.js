@@ -2,6 +2,13 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
+// Scroll animation configuration
+const observerOptions = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: '0px'
+};
+
 // Mobile menu functionality
 const initMobileMenu = () => {
     const menuButton = $('.mobile-menu-button');
@@ -43,9 +50,7 @@ const initScrollAnimations = () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1
-    });
+    }, observerOptions);
 
     $$('.animate-on-scroll').forEach(el => observer.observe(el));
 };
@@ -59,6 +64,12 @@ const initDarkMode = () => {
             const isDark = document.documentElement.classList.contains('dark');
             localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
         });
+    }
+
+    // Check for saved dark mode preference
+    const savedTheme = localStorage.getItem('darkMode');
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
     }
 };
 
@@ -138,12 +149,6 @@ window.addEventListener('scroll', () => {
 });
 
 // Intersection Observer for animations
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -350,12 +355,12 @@ if (menuButton && mobileMenu) {
 }
 
 // Intersection Observer for Advanced Animations
-const observerOptions = {
+const observerOptionsAdvanced = {
     threshold: 0.1,
     rootMargin: '20px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observerAdvanced = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate-in');
@@ -364,10 +369,10 @@ const observer = new IntersectionObserver((entries) => {
             }
         }
     });
-}, observerOptions);
+}, observerOptionsAdvanced);
 
 document.querySelectorAll('.feature-card, .pricing-card, .testimonial-card').forEach(element => {
-    observer.observe(element);
+    observerAdvanced.observe(element);
 });
 
 // Handle loading screen
