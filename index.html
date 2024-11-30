@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fontify - Your AI Font Assistant. Make your website fonts perfect with one click using AI-powered optimization.">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#6366f1">
     <title>Fontify - Your AI Font Assistant</title>
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="/styles.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="/script.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="/images/hero-image.png" as="image" crossorigin="anonymous">
     
-    <!-- Preload key resources -->
-    <link rel="preload" href="/styles.css" as="style">
-    <link rel="preload" href="/script.js" as="script">
-    <link rel="preload" href="/images/hero-image.png" as="image">
-    
-    <!-- Actual resource loading -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css" crossorigin="anonymous">
     
     <!-- Open Graph tags -->
     <meta property="og:title" content="Fontify - Your AI Font Assistant">
@@ -306,7 +299,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script type="module" src="/script.js" defer></script>
+    <script src="/script.js" type="module" defer crossorigin="anonymous"></script>
     
     <!-- Error boundary -->
     <div id="error-boundary" class="error-boundary" role="alert" aria-live="assertive" hidden>

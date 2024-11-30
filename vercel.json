@@ -8,17 +8,40 @@
   ],
   "routes": [
     {
+      "src": "/styles\\.css",
+      "headers": {
+        "Content-Type": "text/css",
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/script\\.js",
+      "headers": {
+        "Content-Type": "text/javascript",
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)\\.png",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/manifest\\.json",
+      "headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    },
+    {
       "src": "/(.*)",
       "headers": {
-        "X-Content-Type-Options": "nosniff",
         "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
         "X-XSS-Protection": "1; mode=block",
-        "Content-Security-Policy": "default-src 'self' https:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https:; img-src 'self' https: data:;",
-        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
-        "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
         "Referrer-Policy": "strict-origin-when-cross-origin"
-      },
-      "continue": true
+      }
     },
     {
       "handle": "filesystem"
@@ -29,45 +52,7 @@
       "status": 404
     }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/styles.css",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/css"
-        }
-      ]
-    },
-    {
-      "source": "/script.js",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/javascript"
-        }
-      ]
-    }
-  ]
+  "headers": [],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
