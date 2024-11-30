@@ -9,8 +9,11 @@
     
     <!-- Preload critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- Preload key resources -->
     <link rel="preload" href="/styles.css" as="style">
     <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" href="/images/hero-image.png" as="image">
     
     <!-- Actual resource loading -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -106,7 +109,7 @@
                 <a href="#features" class="cta-button secondary">Learn More</a>
             </div>
             <div class="hero-image">
-                <img src="hero-image.png" alt="Fontify in action">
+                <img src="/images/hero-image.png" alt="Fontify in action">
             </div>
         </div>
     </header>
@@ -144,7 +147,7 @@
                         <h3>Developers</h3>
                         <p>Say goodbye to tedious font debugging</p>
                         <ul>
-                            <li>Instant font inspection</li>
+                            <li>Font inspection</li>
                             <li>Real-time preview</li>
                             <li>No code changes needed</li>
                         </ul>
@@ -302,11 +305,8 @@
         </div>
     </footer>
 
-    <!-- Preload key images -->
-    <link rel="preload" as="image" href="hero-image.png">
-    
-    <!-- Defer non-critical JavaScript -->
-    <script type="module" defer src="/script.js"></script>
+    <!-- Scripts -->
+    <script type="module" src="/script.js" defer></script>
     
     <!-- Error boundary -->
     <div id="error-boundary" class="error-boundary" role="alert" aria-live="assertive" hidden>
